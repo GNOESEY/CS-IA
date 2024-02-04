@@ -1,0 +1,26 @@
+
+<html> 
+<head> <!-- This element contains meta-information about the HTML document -->
+    <title>{{ recipe.title }}</title> <!-- The title element specifies the title of the HTML document. -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"> <!-- This line links the CSS stylesheet to the recipe.HTML document -->
+</head> 
+<body> <!-- This tag shows the content of the HTML document (the web page) -->
+    <div class="recipe"> <!-- A container for the recipe. The class name can be used to style it with CSS -->
+        <h1 class="no-border">{{ recipe.title }}</h1> <!-- The main heading of the page -->
+        <img src="{{ recipe.image }}" alt="{{ recipe.title }}"> <!-- An image element displaying the recipe image. -->
+        <p>Servings: {{ recipe.servings }}</p> <!-- A paragraph element displaying the time of servings for the recipe -->
+        <h2>Ingredients</h2> <!-- A sub-heading for the ingredients list -->
+        <ul> <!-- An unordered list for the ingredients -->
+        {% for ingredient in recipe.extendedIngredients %} <!-- A loop that goes through each ingredient in the recipe -->
+            <li>{{ ingredient.original }}</li> <!-- List item for each ingredient -->
+        {% endfor %}
+        </ul>
+        <h2>Instructions</h2> <!-- A sub-heading for the recipe list -->
+        <ol> <!-- An ordered list for the instructions -->
+        {% for step in recipe_steps %} <!-- A loop that goes through each step in the recipe -->
+            <li>{{ step }}</li> <!-- List item for each step -->
+        {% endfor %}
+        </ol>
+    </div>
+</body>
+</html> <!-- End of the HTML document -->
