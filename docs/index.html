@@ -1,0 +1,27 @@
+
+<html> 
+<head> <!-- This contains meta-information about the HTML document -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"> <!-- This line links the CSS stylesheet to the index.HTML document -->
+</head> 
+<body> <!-- This tag contains the content of the HTML document -->
+    <p class="title" style="text-align:center;">YUMMY</p> <!-- It used the class, "title" which is "YUMMY" and made it central -->
+    <form action="/search" method="post"> <!-- A form that sends a POST request to the '/search' route when submitted -->
+        <input type="text" name="ingredients" placeholder="Enter ingredients"> <!-- A text input field for the ingredients. -->
+        <select name="diet"> <!-- A list for selecting diet -->
+            <option value="">Select diet</option>  <!-- The first option that prompts the user to select a diet -->
+            <option value="vegan">Vegan</option> <!-- The first option -->
+            <option value="vegetarian">Vegetarian</option> <!-- The second option -->
+        </select>
+        <select name="intolerances"> <!-- A list for selecting the intolerances -->
+            <option value="">Select intolerances</option> <!-- The first option that prompts the user to select an intolerance -->
+            <option value="dairy">Dairy</option> <!--First option -->
+            <option value="gluten">Gluten</option> <!-- Second option -->
+        </select>
+        <input type="submit" value="Search"> <!-- A submit button for the form. When clicked, the form is submitted -->
+    </form>
+</body>
+</html> 
+
+
+
+
