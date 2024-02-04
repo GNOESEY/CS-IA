@@ -1,0 +1,16 @@
+
+<html> 
+<head> <!-- This element contains meta-information about the HTML document -->
+    <title>Recipe Results</title> <!-- The title element specifies the title of the HTML document. -->
+    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- This line links the CSS stylesheet to the Results.HTML document -->
+</head> 
+<body> <!-- This tag represents the content of the HTML document (the web page) -->
+    <h1>Recipe List</h1> <!-- The main title of the page -->
+    {% for recipe in recipes %} <!-- A loop that goes through each recipe in the recipes list -->
+    <div class="recipe"> <!-- A container for each recipe. The class name can be used to style it with CSS -->
+        <h2><a href="{{ url_for('recipe', recipe_id=recipe.id) }}">{{ loop.index }}. {{ recipe.title }}</a></h2> <!-- A sub-heading for each recipe title -->
+        <img src="{{ recipe.image }}" alt="{{ recipe.title }}"> <!-- This displays a recipe images -->
+    </div>
+    {% endfor %} <!-- End of the loop -->
+</body>
+</html> 
