@@ -3,7 +3,7 @@ body {
     margin: 100px;  /* Sets the margin around the body to 100px */
     padding: 0;  /* Sets the padding inside the body to 0 */
     background-color: #ffe5b4;  /* Sets the background color of the body to a light orange color */
-    background-image: url('background.jpg');  /* Sets the background image of the body to an image located at '/static/css/background.jpg' */
+    background-image: url('static/background.jpg');  /* Sets the background image of the body to an image located at '/static/css/background.jpg' */
     background-attachment: fixed;  /* Sets the background image to not scroll with the rest of the page */
     background-size: cover;  /* Sets the size of the background image to cover the entire body */
     color: #333;  /* Sets the color of the text in the body to a dark gray color */
